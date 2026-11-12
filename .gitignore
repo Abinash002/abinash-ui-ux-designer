@@ -1,0 +1,27 @@
+# Backup & legacy unused files
+backup/
+assets/js/ajax-form.js
+
+# Local development & editor folders
+.vscode/
+.agents/
+node_modules/
+
+# Local backend & server scripts (static site only)
+*.php
+*.ps1
+server.js
+package.json
+package-lock.json
+
+# Environment files & credentials
+.env
+.env.*
+
+# OS & temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.bak
