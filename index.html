@@ -43,7 +43,7 @@
     <link id="dark-theme-css" rel="stylesheet" href="assets/css/dark-theme.css">
     <!-- Immediate Theme Application (Anti-FOUC) -->
     <script>
-        (function() {
+        (function () {
             try {
                 var savedTheme = localStorage.getItem('abinash_portfolio_theme');
                 // Default to dark theme if not explicitly chosen as light
@@ -56,7 +56,7 @@
                     document.documentElement.classList.add('dark-theme', 'active-dark-mode');
                     document.documentElement.setAttribute('data-theme', 'dark');
                 }
-            } catch (e) {}
+            } catch (e) { }
         })();
     </script>
 </head>
@@ -83,10 +83,13 @@
                     <div class="col-12">
                         <div class="mobile__nav__toggler"><i class="fas fa-bars"></i></div>
                         <div class="mobile-header-switcher">
-                            <button type="button" class="theme-switcher-btn mode__switcher" id="themeSwitcherMobileHeader" aria-label="Switch theme mode" title="Switch Theme">
+                            <button type="button" class="theme-switcher-btn mode__switcher"
+                                id="themeSwitcherMobileHeader" aria-label="Switch theme mode" title="Switch Theme">
                                 <span class="theme-switcher-track">
                                     <span class="theme-switcher-icon icon-sun" aria-hidden="true">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                            stroke-linejoin="round">
                                             <circle cx="12" cy="12" r="5"></circle>
                                             <line x1="12" y1="1" x2="12" y2="3"></line>
                                             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -100,7 +103,9 @@
                                     </span>
                                     <span class="theme-switcher-thumb"></span>
                                     <span class="theme-switcher-icon icon-moon" aria-hidden="true">
-                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                            stroke-linejoin="round">
                                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                                         </svg>
                                     </span>
@@ -126,10 +131,14 @@
                                 </div>
                                 <div class="header__action-wrap d-flex align-items-center">
                                     <!-- Theme Switcher Toggle (Desktop) -->
-                                    <button type="button" class="theme-switcher-btn mode__switcher d-none d-xl-inline-flex" id="themeSwitcherDesktop" aria-label="Switch theme mode" title="Switch Theme">
+                                    <button type="button"
+                                        class="theme-switcher-btn mode__switcher d-none d-xl-inline-flex"
+                                        id="themeSwitcherDesktop" aria-label="Switch theme mode" title="Switch Theme">
                                         <span class="theme-switcher-track">
                                             <span class="theme-switcher-icon icon-sun" aria-hidden="true">
-                                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                                    stroke-linejoin="round">
                                                     <circle cx="12" cy="12" r="5"></circle>
                                                     <line x1="12" y1="1" x2="12" y2="3"></line>
                                                     <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -143,7 +152,9 @@
                                             </span>
                                             <span class="theme-switcher-thumb"></span>
                                             <span class="theme-switcher-icon icon-moon" aria-hidden="true">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                                    stroke-linejoin="round">
                                                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                                                 </svg>
                                             </span>
@@ -172,10 +183,13 @@
                                     <span class="drawer-theme-label">
                                         <i class="fal fa-adjust me-2"></i> Theme
                                     </span>
-                                    <button type="button" class="theme-switcher-btn mode__switcher" id="themeSwitcherDrawer" aria-label="Switch theme mode" title="Switch Theme">
+                                    <button type="button" class="theme-switcher-btn mode__switcher"
+                                        id="themeSwitcherDrawer" aria-label="Switch theme mode" title="Switch Theme">
                                         <span class="theme-switcher-track">
                                             <span class="theme-switcher-icon icon-sun" aria-hidden="true">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                                    stroke-linejoin="round">
                                                     <circle cx="12" cy="12" r="5"></circle>
                                                     <line x1="12" y1="1" x2="12" y2="3"></line>
                                                     <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -189,7 +203,9 @@
                                             </span>
                                             <span class="theme-switcher-thumb"></span>
                                             <span class="theme-switcher-icon icon-moon" aria-hidden="true">
-                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                                    stroke-linejoin="round">
                                                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                                                 </svg>
                                             </span>
@@ -527,14 +543,20 @@
                             <!-- ------------------------------------------------- -->
                             <!-- PANEL 01: UI/UX & Product Design                 -->
                             <!-- ------------------------------------------------- -->
-                            <div class="service-preview-panel is-active" id="service-panel-1" role="tabpanel" aria-labelledby="service-tab-1">
+                            <div class="service-preview-panel is-active" id="service-panel-1" role="tabpanel"
+                                aria-labelledby="service-tab-1">
                                 <div class="service-preview__media">
-                                    <img src="assets/img/portfolio/serv_1.webp" alt="UI/UX &amp; Product Design Preview — DropUrTrip" class="service-preview__img" loading="lazy">
+                                    <img src="assets/img/portfolio/serv_1.webp"
+                                        alt="UI/UX &amp; Product Design Preview — DropUrTrip"
+                                        class="service-preview__img" loading="lazy">
                                 </div>
                                 <div class="service-preview__body">
                                     <span class="service-preview__eyebrow">SELECTED SERVICE</span>
                                     <h3 class="service-preview__title">UI/UX &amp; Product Design</h3>
-                                    <p class="service-preview__desc">Designing intuitive, user-centered digital experiences that balance functionality, usability, and visual clarity. From research and wireframing to high-fidelity interfaces and interactive prototypes.</p>
+                                    <p class="service-preview__desc">Designing intuitive, user-centered digital
+                                        experiences that balance functionality, usability, and visual clarity. From
+                                        research and wireframing to high-fidelity interfaces and interactive prototypes.
+                                    </p>
                                     <div class="service-preview__tags">
                                         <span class="service-preview__tag" style="--tag-idx: 0;">UX Research</span>
                                         <span class="service-preview__tag" style="--tag-idx: 1;">UI Design</span>
@@ -547,17 +569,23 @@
                             <!-- ------------------------------------------------- -->
                             <!-- PANEL 02: Website Design                         -->
                             <!-- ------------------------------------------------- -->
-                            <div class="service-preview-panel" id="service-panel-2" role="tabpanel" aria-labelledby="service-tab-2">
+                            <div class="service-preview-panel" id="service-panel-2" role="tabpanel"
+                                aria-labelledby="service-tab-2">
                                 <div class="service-preview__media">
-                                    <img src="assets/img/portfolio/serv_2.webp" alt="Website Design Preview — Miyeon Casuals" class="service-preview__img" loading="lazy">
+                                    <img src="assets/img/portfolio/serv_2.webp"
+                                        alt="Website Design Preview — Miyeon Casuals" class="service-preview__img"
+                                        loading="lazy">
                                 </div>
                                 <div class="service-preview__body">
                                     <span class="service-preview__eyebrow">SELECTED SERVICE</span>
                                     <h3 class="service-preview__title">Website Design</h3>
-                                    <p class="service-preview__desc">Creating modern, responsive websites with thoughtful layouts, strong visual hierarchy, and engaging interactions that communicate your brand and deliver a seamless user experience.</p>
+                                    <p class="service-preview__desc">Creating modern, responsive websites with
+                                        thoughtful layouts, strong visual hierarchy, and engaging interactions that
+                                        communicate your brand and deliver a seamless user experience.</p>
                                     <div class="service-preview__tags">
                                         <span class="service-preview__tag" style="--tag-idx: 0;">Website Design</span>
-                                        <span class="service-preview__tag" style="--tag-idx: 1;">Responsive Design</span>
+                                        <span class="service-preview__tag" style="--tag-idx: 1;">Responsive
+                                            Design</span>
                                         <span class="service-preview__tag" style="--tag-idx: 2;">Framer</span>
                                         <span class="service-preview__tag" style="--tag-idx: 3;">UI Development</span>
                                     </div>
@@ -567,14 +595,19 @@
                             <!-- ------------------------------------------------- -->
                             <!-- PANEL 03: Branding & Graphic Design               -->
                             <!-- ------------------------------------------------- -->
-                            <div class="service-preview-panel" id="service-panel-3" role="tabpanel" aria-labelledby="service-tab-3">
+                            <div class="service-preview-panel" id="service-panel-3" role="tabpanel"
+                                aria-labelledby="service-tab-3">
                                 <div class="service-preview__media">
-                                    <img src="assets/img/Branding/Brand _1.png" alt="Branding &amp; Graphic Design Preview" class="service-preview__img" loading="lazy">
+                                    <img src="assets/img/Branding/Brand _1.png"
+                                        alt="Branding &amp; Graphic Design Preview" class="service-preview__img"
+                                        loading="lazy">
                                 </div>
                                 <div class="service-preview__body">
                                     <span class="service-preview__eyebrow">SELECTED SERVICE</span>
                                     <h3 class="service-preview__title">Branding &amp; Graphic Design</h3>
-                                    <p class="service-preview__desc">Building consistent visual identities and creative communication through branding, promotional posters, social media creatives, marketing materials, and digital graphics.</p>
+                                    <p class="service-preview__desc">Building consistent visual identities and creative
+                                        communication through branding, promotional posters, social media creatives,
+                                        marketing materials, and digital graphics.</p>
                                     <div class="service-preview__tags">
                                         <span class="service-preview__tag" style="--tag-idx: 0;">Brand Identity</span>
                                         <span class="service-preview__tag" style="--tag-idx: 1;">Graphic Design</span>
@@ -587,36 +620,44 @@
                             <!-- ------------------------------------------------- -->
                             <!-- PANEL 04: Additional Skills (Beyond Design)       -->
                             <!-- ------------------------------------------------- -->
-                            <div class="service-preview-panel" id="service-panel-4" role="tabpanel" aria-labelledby="service-tab-4">
+                            <div class="service-preview-panel" id="service-panel-4" role="tabpanel"
+                                aria-labelledby="service-tab-4">
                                 <div class="service-preview__media">
-                                    <img src="assets/img/portfolio/serv_3.webp" alt="Additional Skills Preview — Beyond Design" class="service-preview__img" loading="lazy">
+                                    <img src="assets/img/portfolio/serv_3.webp"
+                                        alt="Additional Skills Preview — Beyond Design" class="service-preview__img"
+                                        loading="lazy">
                                 </div>
                                 <div class="service-preview__body">
                                     <span class="service-preview__eyebrow">ADDITIONAL SKILLS</span>
-                                    <h3 class="service-preview__title">Beyond Design<span class="service-preview__title-dot">.</span></h3>
-                                   
+                                    <h3 class="service-preview__title">Beyond Design<span
+                                            class="service-preview__title-dot">.</span></h3>
+
                                     <div class="service-preview__skills-grid">
                                         <div class="service-preview__skill-card" style="--tag-idx: 0;">
                                             <span class="service-preview__skill-tag-num">01</span>
                                             <h4 class="service-preview__skill-tag-title">Frontend Development</h4>
-                                            <p class="service-preview__skill-tag-desc">HTML, CSS, JavaScript and responsive interface development.</p>
+                                            <p class="service-preview__skill-tag-desc">HTML, CSS, JavaScript and
+                                                responsive interface development.</p>
                                         </div>
                                         <div class="service-preview__skill-card" style="--tag-idx: 1;">
                                             <span class="service-preview__skill-tag-num">02</span>
                                             <h4 class="service-preview__skill-tag-title">Digital Marketing</h4>
-                                            <p class="service-preview__skill-tag-desc">Social media creatives, digital campaigns, promotional content and visual communication.</p>
+                                            <p class="service-preview__skill-tag-desc">Social media creatives, digital
+                                                campaigns, promotional content and visual communication.</p>
                                         </div>
                                         <div class="service-preview__skill-card" style="--tag-idx: 2;">
                                             <span class="service-preview__skill-tag-num">03</span>
                                             <h4 class="service-preview__skill-tag-title">Illustration</h4>
-                                            <p class="service-preview__skill-tag-desc">Creative visuals, digital artwork and visual storytelling.</p>
+                                            <p class="service-preview__skill-tag-desc">Creative visuals, digital artwork
+                                                and visual storytelling.</p>
                                         </div>
                                         <div class="service-preview__skill-card" style="--tag-idx: 3;">
                                             <span class="service-preview__skill-tag-num">04</span>
                                             <h4 class="service-preview__skill-tag-title">Micro Interactions</h4>
-                                            <p class="service-preview__skill-tag-desc">UI animations, interactive elements, transitions and meaningful motion design.</p>
+                                            <p class="service-preview__skill-tag-desc">UI animations, interactive
+                                                elements, transitions and meaningful motion design.</p>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -631,21 +672,24 @@
                         <!-- Header -->
                         <div class="services-interactive__header">
                             <span class="services-interactive__eyebrow">WHAT I OFFER</span>
-                            <h2 class="services-interactive__heading">How I Can Help You<span class="services-interactive__heading-dot">.</span></h2>
+                            <h2 class="services-interactive__heading">How I Can Help You<span
+                                    class="services-interactive__heading-dot">.</span></h2>
                         </div>
 
                         <!-- 4 Service Rows -->
                         <div class="services-list" role="tablist" aria-label="Services List">
 
                             <!-- Row 01: UI/UX & Product Design -->
-                            <div class="service-row is-active" role="tab" id="service-tab-1" aria-selected="true" aria-controls="service-panel-1" tabindex="0" data-service-index="1">
+                            <div class="service-row is-active" role="tab" id="service-tab-1" aria-selected="true"
+                                aria-controls="service-panel-1" tabindex="0" data-service-index="1">
                                 <div class="service-row__left">
                                     <span class="service-row__num">01</span>
                                     <h3 class="service-row__title">UI/UX &amp; Product Design</h3>
                                 </div>
                                 <div class="service-row__right">
                                     <div class="service-row__indicator" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"
+                                            stroke-linecap="round" stroke-linejoin="round">
                                             <line x1="7" y1="17" x2="17" y2="7"></line>
                                             <polyline points="7 7 17 7 17 17"></polyline>
                                         </svg>
@@ -654,14 +698,16 @@
                             </div>
 
                             <!-- Row 02: Website Design -->
-                            <div class="service-row" role="tab" id="service-tab-2" aria-selected="false" aria-controls="service-panel-2" tabindex="0" data-service-index="2">
+                            <div class="service-row" role="tab" id="service-tab-2" aria-selected="false"
+                                aria-controls="service-panel-2" tabindex="0" data-service-index="2">
                                 <div class="service-row__left">
                                     <span class="service-row__num">02</span>
                                     <h3 class="service-row__title">Website Design</h3>
                                 </div>
                                 <div class="service-row__right">
                                     <div class="service-row__indicator" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"
+                                            stroke-linecap="round" stroke-linejoin="round">
                                             <line x1="7" y1="17" x2="17" y2="7"></line>
                                             <polyline points="7 7 17 7 17 17"></polyline>
                                         </svg>
@@ -670,14 +716,16 @@
                             </div>
 
                             <!-- Row 03: Branding & Graphic Design -->
-                            <div class="service-row" role="tab" id="service-tab-3" aria-selected="false" aria-controls="service-panel-3" tabindex="0" data-service-index="3">
+                            <div class="service-row" role="tab" id="service-tab-3" aria-selected="false"
+                                aria-controls="service-panel-3" tabindex="0" data-service-index="3">
                                 <div class="service-row__left">
                                     <span class="service-row__num">03</span>
                                     <h3 class="service-row__title">Branding &amp; Graphic Design</h3>
                                 </div>
                                 <div class="service-row__right">
                                     <div class="service-row__indicator" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"
+                                            stroke-linecap="round" stroke-linejoin="round">
                                             <line x1="7" y1="17" x2="17" y2="7"></line>
                                             <polyline points="7 7 17 7 17 17"></polyline>
                                         </svg>
@@ -686,14 +734,16 @@
                             </div>
 
                             <!-- Row 04: Additional Skills -->
-                            <div class="service-row" role="tab" id="service-tab-4" aria-selected="false" aria-controls="service-panel-4" tabindex="0" data-service-index="4">
+                            <div class="service-row" role="tab" id="service-tab-4" aria-selected="false"
+                                aria-controls="service-panel-4" tabindex="0" data-service-index="4">
                                 <div class="service-row__left">
                                     <span class="service-row__num">04</span>
                                     <h3 class="service-row__title">Additional Skills</h3>
                                 </div>
                                 <div class="service-row__right">
                                     <div class="service-row__indicator" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"
+                                            stroke-linecap="round" stroke-linejoin="round">
                                             <line x1="7" y1="17" x2="17" y2="7"></line>
                                             <polyline points="7 7 17 7 17 17"></polyline>
                                         </svg>
@@ -1262,7 +1312,6 @@
                                                 data-subtitle="Color Variant & Art Extension">
                                                 <div class="gd-card-media">
                                                     <img src="assets/img/Graphic_design/Pos_11.1.webp"
-
                                                         alt="Poster Design 11 (Variant A)" class="gd-card-img"
                                                         loading="lazy">
                                                     <div class="gd-card-overlay">
@@ -1611,8 +1660,7 @@
                                             <!-- AI Card 1 -->
                                             <a href="https://drive.google.com/file/d/13BPpXl6IgBJXEn6zC2N7zQE-1e9tlPi8/view?usp=sharing"
                                                 target="_blank" rel="noopener noreferrer" class="aiv-card"
-                                                draggable="false"
-                                                aria-label="Proman — Construction Management System">
+                                                draggable="false" aria-label="Proman — Construction Management System">
                                                 <div class="aiv-card-media">
                                                     <img src="assets/videos/AI VIDEOS/AI_1.webp"
                                                         alt="Proman — Construction Management System"
@@ -1638,7 +1686,8 @@
                                                     <div class="aiv-card-overlay">
                                                         <div class="aiv-card-info">
                                                             <h4 class="aiv-card-title">Classwall</h4>
-                                                            <p class="aiv-card-desc">School and College Management System</p>
+                                                            <p class="aiv-card-desc">School and College Management
+                                                                System</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1647,8 +1696,7 @@
                                             <!-- AI Card 3 -->
                                             <a href="https://drive.google.com/file/d/1nIL95zf9Pb7YIQhLXll6N4Fcu1mrA1o-/view?usp=sharing"
                                                 target="_blank" rel="noopener noreferrer" class="aiv-card"
-                                                draggable="false"
-                                                aria-label="Mirus — Art and Craft Store and Studio">
+                                                draggable="false" aria-label="Mirus — Art and Craft Store and Studio">
                                                 <div class="aiv-card-media">
                                                     <img src="assets/videos/AI VIDEOS/AI_4.webp"
                                                         alt="Mirus — Art and Craft Store and Studio"
@@ -1665,8 +1713,7 @@
                                             <!-- AI Card 4 -->
                                             <a href="https://drive.google.com/file/d/15ydi7S4MA1JNMN7P1snr-v-IACEdeZyO/view?usp=sharing"
                                                 target="_blank" rel="noopener noreferrer" class="aiv-card"
-                                                draggable="false"
-                                                aria-label="Work Lokha — Job and Labour Booking Site">
+                                                draggable="false" aria-label="Work Lokha — Job and Labour Booking Site">
                                                 <div class="aiv-card-media">
                                                     <img src="assets/videos/AI VIDEOS/AI_5.webp"
                                                         alt="Work Lokha — Job and Labour Booking Site"
@@ -1683,8 +1730,7 @@
                                             <!-- AI Card 5 -->
                                             <a href="https://drive.google.com/file/d/1YRuFWd92V46QHl3ZW1C9BueNw3FZurIT/view?usp=sharing"
                                                 target="_blank" rel="noopener noreferrer" class="aiv-card"
-                                                draggable="false"
-                                                aria-label="Tuft Chronicles — Tufting Work Studio">
+                                                draggable="false" aria-label="Tuft Chronicles — Tufting Work Studio">
                                                 <div class="aiv-card-media">
                                                     <img src="assets/videos/AI VIDEOS/AI_2.webp"
                                                         alt="Tuft Chronicles — Tufting Work Studio"
@@ -1934,9 +1980,12 @@
                     <!-- Left Column: Introduction -->
                     <div class="skills-intro wow fadeInUp" data-wow-delay=".2s">
                         <span class="skills-intro__eyebrow">MY EXPERTISE</span>
-                        <h2 class="skills-intro__heading">Tools &amp; Skills<br>I Work With<span class="skills-intro__dot">.</span></h2>
+                        <h2 class="skills-intro__heading">Tools &amp; Skills<br>I Work With<span
+                                class="skills-intro__dot">.</span></h2>
                         <p class="skills-intro__desc">
-                            I combine creative design thinking with practical development skills to transform ideas into intuitive digital experiences. From wireframing and prototyping to building responsive interfaces, I use the right tools to bring products to life.
+                            I combine creative design thinking with practical development skills to transform ideas into
+                            intuitive digital experiences. From wireframing and prototyping to building responsive
+                            interfaces, I use the right tools to bring products to life.
                         </p>
                     </div>
 
@@ -1948,26 +1997,43 @@
                             <div class="skills-card__tools">
                                 <!-- Figma -->
                                 <div class="skills-tool-badge" title="Figma" aria-label="Figma">
-                                    <svg width="22" height="33" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
-                                        <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
-                                        <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
-                                        <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
-                                        <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                                    <svg width="22" height="33" viewBox="0 0 38 57" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <path
+                                            d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z"
+                                            fill="#1ABCFE" />
+                                        <path
+                                            d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z"
+                                            fill="#0ACF83" />
+                                        <path
+                                            d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z"
+                                            fill="#FF7262" />
+                                        <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z"
+                                            fill="#F24E1E" />
+                                        <path
+                                            d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z"
+                                            fill="#A259FF" />
                                     </svg>
                                 </div>
                                 <!-- Adobe XD -->
-                                <div class="skills-tool-badge skills-tool-badge--xd" title="Adobe XD" aria-label="Adobe XD">
-                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <rect width="44" height="44" rx="12" fill="#470137"/>
-                                        <path d="M12.5 29.5L16.8 22.8L12.8 16.8H16.4L18.6 20.4L20.8 16.8H24.4L20.4 22.8L24.8 29.5H21.1L18.6 25.3L16.1 29.5H12.5Z" fill="#FF61F6"/>
-                                        <path d="M26.8 14.5H29.6V20.3C30.3 19.3 31.4 18.6 32.8 18.6C35.4 18.6 37.4 20.7 37.4 24.2C37.4 27.7 35.4 29.8 32.8 29.8C31.4 29.8 30.3 29.1 29.6 28.1V29.5H26.8V14.5ZM32 21.2C30.7 21.2 29.6 22.4 29.6 24.2C29.6 26 30.7 27.2 32 27.2C33.3 27.2 34.4 26 34.4 24.2C34.4 22.4 33.3 21.2 32 21.2Z" fill="#FF61F6"/>
+                                <div class="skills-tool-badge skills-tool-badge--xd" title="Adobe XD"
+                                    aria-label="Adobe XD">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <rect width="44" height="44" rx="12" fill="#470137" />
+                                        <path
+                                            d="M12.5 29.5L16.8 22.8L12.8 16.8H16.4L18.6 20.4L20.8 16.8H24.4L20.4 22.8L24.8 29.5H21.1L18.6 25.3L16.1 29.5H12.5Z"
+                                            fill="#FF61F6" />
+                                        <path
+                                            d="M26.8 14.5H29.6V20.3C30.3 19.3 31.4 18.6 32.8 18.6C35.4 18.6 37.4 20.7 37.4 24.2C37.4 27.7 35.4 29.8 32.8 29.8C31.4 29.8 30.3 29.1 29.6 28.1V29.5H26.8V14.5ZM32 21.2C30.7 21.2 29.6 22.4 29.6 24.2C29.6 26 30.7 27.2 32 27.2C33.3 27.2 34.4 26 34.4 24.2C34.4 22.4 33.3 21.2 32 21.2Z"
+                                            fill="#FF61F6" />
                                     </svg>
                                 </div>
                             </div>
                             <h3 class="skills-card__title">UI/UX &amp; Product Design</h3>
                             <p class="skills-card__desc">
-                                Designing user-centered interfaces, wireframes, prototypes, design systems, and seamless digital experiences.
+                                Designing user-centered interfaces, wireframes, prototypes, design systems, and seamless
+                                digital experiences.
                             </p>
                         </div>
 
@@ -1976,39 +2042,55 @@
                             <div class="skills-card__tools">
                                 <!-- Framer -->
                                 <div class="skills-tool-badge" title="Framer" aria-label="Framer">
-                                    <svg width="22" height="32" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M0 0H24V12H12L24 24H12V36L0 24H12L0 12V0Z" fill="#0055FF"/>
+                                    <svg width="22" height="32" viewBox="0 0 24 36" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <path d="M0 0H24V12H12L24 24H12V36L0 24H12L0 12V0Z" fill="#0055FF" />
                                     </svg>
                                 </div>
                                 <!-- HTML5 -->
                                 <div class="skills-tool-badge" title="HTML5" aria-label="HTML5">
-                                    <svg width="26" height="30" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M71.5 460L32 16h448l-39.5 444L256 504 71.5 460z" fill="#E44D26"/>
-                                        <path d="M256 472l153.5-38.5 34-385.5H256V472z" fill="#F16529"/>
-                                        <path d="M256 207h-75.5l-5.2-58.5H256V96H118.5l15.5 174h122V207zm0 148.5l-64.8-17.5-4.2-47H134l8 90 114 31.5V355.5z" fill="#EBEBEB"/>
-                                        <path d="M256 207h75.5l-7.2 80-68.3 18.5v52.5l114-31.5 15.5-174H256V207zm0-111v52.5h132.5l4.5-52.5H256z" fill="#FFFFFF"/>
+                                    <svg width="26" height="30" viewBox="0 0 512 512" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <path d="M71.5 460L32 16h448l-39.5 444L256 504 71.5 460z" fill="#E44D26" />
+                                        <path d="M256 472l153.5-38.5 34-385.5H256V472z" fill="#F16529" />
+                                        <path
+                                            d="M256 207h-75.5l-5.2-58.5H256V96H118.5l15.5 174h122V207zm0 148.5l-64.8-17.5-4.2-47H134l8 90 114 31.5V355.5z"
+                                            fill="#EBEBEB" />
+                                        <path
+                                            d="M256 207h75.5l-7.2 80-68.3 18.5v52.5l114-31.5 15.5-174H256V207zm0-111v52.5h132.5l4.5-52.5H256z"
+                                            fill="#FFFFFF" />
                                     </svg>
                                 </div>
                                 <!-- CSS3 -->
                                 <div class="skills-tool-badge" title="CSS3" aria-label="CSS3">
-                                    <svg width="26" height="30" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M71.5 460L32 16h448l-39.5 444L256 504 71.5 460z" fill="#1572B6"/>
-                                        <path d="M256 472l153.5-38.5 34-385.5H256V472z" fill="#33A9DC"/>
-                                        <path d="M256 207h-75.5l-5.2-58.5H256V96H118.5l15.5 174h122V207zm0 148.5l-64.8-17.5-4.2-47H134l8 90 114 31.5V355.5z" fill="#EBEBEB"/>
-                                        <path d="M256 207h75.5l-7.2 80-68.3 18.5v52.5l114-31.5 15.5-174H256V207zm0-111v52.5h132.5l4.5-52.5H256z" fill="#FFFFFF"/>
+                                    <svg width="26" height="30" viewBox="0 0 512 512" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <path d="M71.5 460L32 16h448l-39.5 444L256 504 71.5 460z" fill="#1572B6" />
+                                        <path d="M256 472l153.5-38.5 34-385.5H256V472z" fill="#33A9DC" />
+                                        <path
+                                            d="M256 207h-75.5l-5.2-58.5H256V96H118.5l15.5 174h122V207zm0 148.5l-64.8-17.5-4.2-47H134l8 90 114 31.5V355.5z"
+                                            fill="#EBEBEB" />
+                                        <path
+                                            d="M256 207h75.5l-7.2 80-68.3 18.5v52.5l114-31.5 15.5-174H256V207zm0-111v52.5h132.5l4.5-52.5H256z"
+                                            fill="#FFFFFF" />
                                     </svg>
                                 </div>
                                 <!-- JavaScript -->
-                                <div class="skills-tool-badge skills-tool-badge--js" title="JavaScript" aria-label="JavaScript">
-                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <rect width="44" height="44" rx="12" fill="#F7DF1E"/>
-                                        <path d="M20.2 30.5C18.7 30.5 17.5 30 16.6 28.9L18.4 26.8C18.9 27.5 19.6 28 20.3 28C21.2 28 21.7 27.5 21.7 26.3V17.8H24.5V26.3C24.5 28.8 22.8 30.5 20.2 30.5ZM28.4 30.5C25.9 30.5 24.4 29 23.9 27.5L26.4 26.2C26.7 27.1 27.4 27.7 28.4 27.7C29.4 27.7 30 27.2 30 26.4C30 25.6 29.4 25.2 28.1 24.7L26.9 24.2C25.1 23.5 24.1 22.3 24.1 20.5C24.1 18.5 25.9 17.2 28.2 17.2C30.1 17.2 31.5 18.1 32.2 19.6L29.9 20.9C29.5 20.1 28.9 19.7 28.1 19.7C27.3 19.7 26.7 20.2 26.7 20.8C26.7 21.4 27.2 21.8 28.4 22.4L29.6 22.9C31.7 23.8 32.8 25 32.8 26.8C32.8 29 31 30.5 28.4 30.5Z" fill="#000000"/>
+                                <div class="skills-tool-badge skills-tool-badge--js" title="JavaScript"
+                                    aria-label="JavaScript">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <rect width="44" height="44" rx="12" fill="#F7DF1E" />
+                                        <path
+                                            d="M20.2 30.5C18.7 30.5 17.5 30 16.6 28.9L18.4 26.8C18.9 27.5 19.6 28 20.3 28C21.2 28 21.7 27.5 21.7 26.3V17.8H24.5V26.3C24.5 28.8 22.8 30.5 20.2 30.5ZM28.4 30.5C25.9 30.5 24.4 29 23.9 27.5L26.4 26.2C26.7 27.1 27.4 27.7 28.4 27.7C29.4 27.7 30 27.2 30 26.4C30 25.6 29.4 25.2 28.1 24.7L26.9 24.2C25.1 23.5 24.1 22.3 24.1 20.5C24.1 18.5 25.9 17.2 28.2 17.2C30.1 17.2 31.5 18.1 32.2 19.6L29.9 20.9C29.5 20.1 28.9 19.7 28.1 19.7C27.3 19.7 26.7 20.2 26.7 20.8C26.7 21.4 27.2 21.8 28.4 22.4L29.6 22.9C31.7 23.8 32.8 25 32.8 26.8C32.8 29 31 30.5 28.4 30.5Z"
+                                            fill="#000000" />
                                     </svg>
                                 </div>
                             </div>
                             <h3 class="skills-card__title">Web &amp; Interaction Design</h3>
                             <p class="skills-card__desc">
-                                Creating responsive websites, interactive layouts, and polished web experiences with attention to usability and visual consistency.
+                                Creating responsive websites, interactive layouts, and polished web experiences with
+                                attention to usability and visual consistency.
                             </p>
                         </div>
 
@@ -2016,10 +2098,14 @@
                         <div class="skills-card wow fadeInUp" data-wow-delay=".4s">
                             <div class="skills-card__tools">
                                 <!-- Adobe Photoshop -->
-                                <div class="skills-tool-badge skills-tool-badge--ps" title="Adobe Photoshop" aria-label="Adobe Photoshop">
-                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <rect width="44" height="44" rx="12" fill="#001E36"/>
-                                        <path d="M13.2 15H19C21.5 15 23.2 16.4 23.2 18.8C23.2 21.2 21.5 22.6 19 22.6H16.1V29.2H13.2V15ZM16.1 20.2H18.7C19.9 20.2 20.5 19.7 20.5 18.8C20.5 17.9 19.9 17.4 18.7 17.4H16.1V20.2ZM25.7 29.5C23.8 29.5 22.6 28.4 22.2 27.2L24.5 26.2C24.8 26.9 25.4 27.5 26.1 27.5C27 27.5 27.5 27.1 27.5 26.4C27.5 25.7 27 25.4 25.8 24.9L24.8 24.5C23.2 23.8 22.4 22.7 22.4 21.2C22.4 19.4 24 18.1 26 18.1C27.6 18.1 28.8 18.9 29.4 20.2L27.3 21.3C27 20.7 26.5 20.3 25.9 20.3C25.2 20.3 24.8 20.7 24.8 21.3C24.8 21.9 25.2 22.3 26.3 22.7L27.3 23.1C29.1 23.8 30.1 24.8 30.1 26.5C30.1 28.5 28.4 29.5 25.7 29.5Z" fill="#31A8FF"/>
+                                <div class="skills-tool-badge skills-tool-badge--ps" title="Adobe Photoshop"
+                                    aria-label="Adobe Photoshop">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <rect width="44" height="44" rx="12" fill="#001E36" />
+                                        <path
+                                            d="M13.2 15H19C21.5 15 23.2 16.4 23.2 18.8C23.2 21.2 21.5 22.6 19 22.6H16.1V29.2H13.2V15ZM16.1 20.2H18.7C19.9 20.2 20.5 19.7 20.5 18.8C20.5 17.9 19.9 17.4 18.7 17.4H16.1V20.2ZM25.7 29.5C23.8 29.5 22.6 28.4 22.2 27.2L24.5 26.2C24.8 26.9 25.4 27.5 26.1 27.5C27 27.5 27.5 27.1 27.5 26.4C27.5 25.7 27 25.4 25.8 24.9L24.8 24.5C23.2 23.8 22.4 22.7 22.4 21.2C22.4 19.4 24 18.1 26 18.1C27.6 18.1 28.8 18.9 29.4 20.2L27.3 21.3C27 20.7 26.5 20.3 25.9 20.3C25.2 20.3 24.8 20.7 24.8 21.3C24.8 21.9 25.2 22.3 26.3 22.7L27.3 23.1C29.1 23.8 30.1 24.8 30.1 26.5C30.1 28.5 28.4 29.5 25.7 29.5Z"
+                                            fill="#31A8FF" />
                                     </svg>
                                 </div>
                                 <!-- Canva -->
@@ -2027,16 +2113,21 @@
                                     <img src="assets/img/icons/canva_mark_converted.webp" alt="Canva">
                                 </div>
                                 <!-- Adobe Illustrator -->
-                                <div class="skills-tool-badge skills-tool-badge--ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">
-                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <rect width="44" height="44" rx="12" fill="#330000"/>
-                                        <path d="M12.2 29.5L17.8 14.8H21.2L26.8 29.5H23.5L22.2 26H16.8L15.5 29.5H12.2ZM17.8 23.3H21.2L19.5 18.5L17.8 23.3ZM29.2 17.4C28.2 17.4 27.5 16.7 27.5 15.7C27.5 14.7 28.2 14 29.2 14C30.2 14 30.9 14.7 30.9 15.7C30.9 16.7 30.2 17.4 29.2 17.4ZM27.8 29.5V19.2H30.6V29.5H27.8Z" fill="#FF9A00"/>
+                                <div class="skills-tool-badge skills-tool-badge--ai" title="Adobe Illustrator"
+                                    aria-label="Adobe Illustrator">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <rect width="44" height="44" rx="12" fill="#330000" />
+                                        <path
+                                            d="M12.2 29.5L17.8 14.8H21.2L26.8 29.5H23.5L22.2 26H16.8L15.5 29.5H12.2ZM17.8 23.3H21.2L19.5 18.5L17.8 23.3ZM29.2 17.4C28.2 17.4 27.5 16.7 27.5 15.7C27.5 14.7 28.2 14 29.2 14C30.2 14 30.9 14.7 30.9 15.7C30.9 16.7 30.2 17.4 29.2 17.4ZM27.8 29.5V19.2H30.6V29.5H27.8Z"
+                                            fill="#FF9A00" />
                                     </svg>
                                 </div>
                             </div>
                             <h3 class="skills-card__title">Creative &amp; Visual Design</h3>
                             <p class="skills-card__desc">
-                                Creating visual identities, social media creatives, marketing materials, and engaging digital graphics.
+                                Creating visual identities, social media creatives, marketing materials, and engaging
+                                digital graphics.
                             </p>
                         </div>
 
@@ -2044,32 +2135,48 @@
                         <div class="skills-card wow fadeInUp" data-wow-delay=".5s">
                             <div class="skills-card__tools">
                                 <!-- LottieFiles -->
-                                <div class="skills-tool-badge skills-tool-badge--lottie" title="LottieFiles" aria-label="LottieFiles">
-                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <rect width="44" height="44" rx="12" fill="#00DDB3"/>
-                                        <path d="M22.87 13.23C20.98 11.59 18.07 12.35 17.04 14.77L13.81 22.1C12.79 24.52 13.79 27.43 16.21 28.77C18.63 30.11 21.69 29.28 23.11 26.9L25.99 22.07C26.74 20.81 28.36 20.39 29.62 21.14C30.88 21.89 31.3 23.51 30.55 24.77L28.63 28.25C28.35 28.76 28.53 29.4 29.04 29.68C29.55 29.96 30.19 29.78 30.47 29.27L32.39 25.79C33.74 23.37 32.91 20.31 30.49 18.97C28.07 17.63 25.01 18.46 23.59 20.84L20.71 25.67C19.96 26.93 18.34 27.35 17.08 26.6C15.82 25.85 15.4 24.23 16.15 22.97L19.38 15.64C19.98 14.22 21.68 13.78 22.79 14.74L22.85 14.79C23.29 15.17 23.95 15.12 24.33 14.68C24.71 14.24 24.66 13.58 24.22 13.2L22.87 13.23Z" fill="#FFFFFF"/>
+                                <div class="skills-tool-badge skills-tool-badge--lottie" title="LottieFiles"
+                                    aria-label="LottieFiles">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <rect width="44" height="44" rx="12" fill="#00DDB3" />
+                                        <path
+                                            d="M22.87 13.23C20.98 11.59 18.07 12.35 17.04 14.77L13.81 22.1C12.79 24.52 13.79 27.43 16.21 28.77C18.63 30.11 21.69 29.28 23.11 26.9L25.99 22.07C26.74 20.81 28.36 20.39 29.62 21.14C30.88 21.89 31.3 23.51 30.55 24.77L28.63 28.25C28.35 28.76 28.53 29.4 29.04 29.68C29.55 29.96 30.19 29.78 30.47 29.27L32.39 25.79C33.74 23.37 32.91 20.31 30.49 18.97C28.07 17.63 25.01 18.46 23.59 20.84L20.71 25.67C19.96 26.93 18.34 27.35 17.08 26.6C15.82 25.85 15.4 24.23 16.15 22.97L19.38 15.64C19.98 14.22 21.68 13.78 22.79 14.74L22.85 14.79C23.29 15.17 23.95 15.12 24.33 14.68C24.71 14.24 24.66 13.58 24.22 13.2L22.87 13.23Z"
+                                            fill="#FFFFFF" />
                                     </svg>
                                 </div>
                                 <!-- Figma -->
                                 <div class="skills-tool-badge" title="Figma" aria-label="Figma">
-                                    <svg width="22" height="33" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
-                                        <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
-                                        <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
-                                        <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
-                                        <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                                    <svg width="22" height="33" viewBox="0 0 38 57" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <path
+                                            d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z"
+                                            fill="#1ABCFE" />
+                                        <path
+                                            d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z"
+                                            fill="#0ACF83" />
+                                        <path
+                                            d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z"
+                                            fill="#FF7262" />
+                                        <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z"
+                                            fill="#F24E1E" />
+                                        <path
+                                            d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z"
+                                            fill="#A259FF" />
                                     </svg>
                                 </div>
                                 <!-- Framer -->
                                 <div class="skills-tool-badge" title="Framer" aria-label="Framer">
-                                    <svg width="22" height="32" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M0 0H24V12H12L24 24H12V36L0 24H12L0 12V0Z" fill="#0055FF"/>
+                                    <svg width="22" height="32" viewBox="0 0 24 36" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <path d="M0 0H24V12H12L24 24H12V36L0 24H12L0 12V0Z" fill="#0055FF" />
                                     </svg>
                                 </div>
                             </div>
                             <h3 class="skills-card__title">Motion &amp; Animation</h3>
                             <p class="skills-card__desc">
-                                Adding meaningful motion, micro-interactions, and animated elements to enhance digital experiences.
+                                Adding meaningful motion, micro-interactions, and animated elements to enhance digital
+                                experiences.
                             </p>
                         </div>
 
@@ -2078,33 +2185,48 @@
                             <div class="skills-card__tools">
                                 <!-- HTML5 -->
                                 <div class="skills-tool-badge" title="HTML5" aria-label="HTML5">
-                                    <svg width="26" height="30" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M71.5 460L32 16h448l-39.5 444L256 504 71.5 460z" fill="#E44D26"/>
-                                        <path d="M256 472l153.5-38.5 34-385.5H256V472z" fill="#F16529"/>
-                                        <path d="M256 207h-75.5l-5.2-58.5H256V96H118.5l15.5 174h122V207zm0 148.5l-64.8-17.5-4.2-47H134l8 90 114 31.5V355.5z" fill="#EBEBEB"/>
-                                        <path d="M256 207h75.5l-7.2 80-68.3 18.5v52.5l114-31.5 15.5-174H256V207zm0-111v52.5h132.5l4.5-52.5H256z" fill="#FFFFFF"/>
+                                    <svg width="26" height="30" viewBox="0 0 512 512" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <path d="M71.5 460L32 16h448l-39.5 444L256 504 71.5 460z" fill="#E44D26" />
+                                        <path d="M256 472l153.5-38.5 34-385.5H256V472z" fill="#F16529" />
+                                        <path
+                                            d="M256 207h-75.5l-5.2-58.5H256V96H118.5l15.5 174h122V207zm0 148.5l-64.8-17.5-4.2-47H134l8 90 114 31.5V355.5z"
+                                            fill="#EBEBEB" />
+                                        <path
+                                            d="M256 207h75.5l-7.2 80-68.3 18.5v52.5l114-31.5 15.5-174H256V207zm0-111v52.5h132.5l4.5-52.5H256z"
+                                            fill="#FFFFFF" />
                                     </svg>
                                 </div>
                                 <!-- CSS3 -->
                                 <div class="skills-tool-badge" title="CSS3" aria-label="CSS3">
-                                    <svg width="26" height="30" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M71.5 460L32 16h448l-39.5 444L256 504 71.5 460z" fill="#1572B6"/>
-                                        <path d="M256 472l153.5-38.5 34-385.5H256V472z" fill="#33A9DC"/>
-                                        <path d="M256 207h-75.5l-5.2-58.5H256V96H118.5l15.5 174h122V207zm0 148.5l-64.8-17.5-4.2-47H134l8 90 114 31.5V355.5z" fill="#EBEBEB"/>
-                                        <path d="M256 207h75.5l-7.2 80-68.3 18.5v52.5l114-31.5 15.5-174H256V207zm0-111v52.5h132.5l4.5-52.5H256z" fill="#FFFFFF"/>
+                                    <svg width="26" height="30" viewBox="0 0 512 512" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <path d="M71.5 460L32 16h448l-39.5 444L256 504 71.5 460z" fill="#1572B6" />
+                                        <path d="M256 472l153.5-38.5 34-385.5H256V472z" fill="#33A9DC" />
+                                        <path
+                                            d="M256 207h-75.5l-5.2-58.5H256V96H118.5l15.5 174h122V207zm0 148.5l-64.8-17.5-4.2-47H134l8 90 114 31.5V355.5z"
+                                            fill="#EBEBEB" />
+                                        <path
+                                            d="M256 207h75.5l-7.2 80-68.3 18.5v52.5l114-31.5 15.5-174H256V207zm0-111v52.5h132.5l4.5-52.5H256z"
+                                            fill="#FFFFFF" />
                                     </svg>
                                 </div>
                                 <!-- JavaScript -->
-                                <div class="skills-tool-badge skills-tool-badge--js" title="JavaScript" aria-label="JavaScript">
-                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <rect width="44" height="44" rx="12" fill="#F7DF1E"/>
-                                        <path d="M20.2 30.5C18.7 30.5 17.5 30 16.6 28.9L18.4 26.8C18.9 27.5 19.6 28 20.3 28C21.2 28 21.7 27.5 21.7 26.3V17.8H24.5V26.3C24.5 28.8 22.8 30.5 20.2 30.5ZM28.4 30.5C25.9 30.5 24.4 29 23.9 27.5L26.4 26.2C26.7 27.1 27.4 27.7 28.4 27.7C29.4 27.7 30 27.2 30 26.4C30 25.6 29.4 25.2 28.1 24.7L26.9 24.2C25.1 23.5 24.1 22.3 24.1 20.5C24.1 18.5 25.9 17.2 28.2 17.2C30.1 17.2 31.5 18.1 32.2 19.6L29.9 20.9C29.5 20.1 28.9 19.7 28.1 19.7C27.3 19.7 26.7 20.2 26.7 20.8C26.7 21.4 27.2 21.8 28.4 22.4L29.6 22.9C31.7 23.8 32.8 25 32.8 26.8C32.8 29 31 30.5 28.4 30.5Z" fill="#000000"/>
+                                <div class="skills-tool-badge skills-tool-badge--js" title="JavaScript"
+                                    aria-label="JavaScript">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <rect width="44" height="44" rx="12" fill="#F7DF1E" />
+                                        <path
+                                            d="M20.2 30.5C18.7 30.5 17.5 30 16.6 28.9L18.4 26.8C18.9 27.5 19.6 28 20.3 28C21.2 28 21.7 27.5 21.7 26.3V17.8H24.5V26.3C24.5 28.8 22.8 30.5 20.2 30.5ZM28.4 30.5C25.9 30.5 24.4 29 23.9 27.5L26.4 26.2C26.7 27.1 27.4 27.7 28.4 27.7C29.4 27.7 30 27.2 30 26.4C30 25.6 29.4 25.2 28.1 24.7L26.9 24.2C25.1 23.5 24.1 22.3 24.1 20.5C24.1 18.5 25.9 17.2 28.2 17.2C30.1 17.2 31.5 18.1 32.2 19.6L29.9 20.9C29.5 20.1 28.9 19.7 28.1 19.7C27.3 19.7 26.7 20.2 26.7 20.8C26.7 21.4 27.2 21.8 28.4 22.4L29.6 22.9C31.7 23.8 32.8 25 32.8 26.8C32.8 29 31 30.5 28.4 30.5Z"
+                                            fill="#000000" />
                                     </svg>
                                 </div>
                             </div>
                             <h3 class="skills-card__title">Front-End Development</h3>
                             <p class="skills-card__desc">
-                                Building reusable UI components and translating design concepts into functional front-end interfaces.
+                                Building reusable UI components and translating design concepts into functional
+                                front-end interfaces.
                             </p>
                         </div>
 
@@ -2190,7 +2312,8 @@
                                                 title="LinkedIn">
                                                 <div class="pcontact-feature-icon" aria-hidden="true">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                                                        <path
+                                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
                                                     </svg>
                                                 </div>
                                                 <div class="pcontact-feature-info">
@@ -2204,7 +2327,8 @@
                                                 rel="noopener noreferrer" class="pcontact-feature-item" title="Behance">
                                                 <div class="pcontact-feature-icon" aria-hidden="true">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                                        <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.171 3-3.468 0-6.195-2.476-6.195-6.079 0-3.791 2.776-6.171 6.079-6.171 3.42 0 5.612 2.378 5.612 5.925 0 .428-.047.884-.078 1.075h-8.761c.071 2.11 1.764 3.25 3.528 3.25 1.705 0 2.766-.757 3.255-1.55l1.731.55zm-8.868-3.771h5.889c-.066-1.571-.977-2.748-2.837-2.748-1.786 0-2.873 1.144-3.052 2.748zm-10.858-6.229h6.143c1.789 0 3.143.435 3.143 2.143 0 1.096-.669 1.83-1.603 2.155 1.258.337 1.96 1.25 1.96 2.457 0 2.062-1.654 2.47-3.487 2.47h-6.156v-9.225zm3.036 3.655h2.464c.731 0 1.214-.26 1.214-.857s-.483-.857-1.214-.857h-2.464v1.714zm0 3.856h2.643c.804 0 1.357-.312 1.357-.964 0-.67-.553-.964-1.357-.964h-2.643v1.928z"/>
+                                                        <path
+                                                            d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.171 3-3.468 0-6.195-2.476-6.195-6.079 0-3.791 2.776-6.171 6.079-6.171 3.42 0 5.612 2.378 5.612 5.925 0 .428-.047.884-.078 1.075h-8.761c.071 2.11 1.764 3.25 3.528 3.25 1.705 0 2.766-.757 3.255-1.55l1.731.55zm-8.868-3.771h5.889c-.066-1.571-.977-2.748-2.837-2.748-1.786 0-2.873 1.144-3.052 2.748zm-10.858-6.229h6.143c1.789 0 3.143.435 3.143 2.143 0 1.096-.669 1.83-1.603 2.155 1.258.337 1.96 1.25 1.96 2.457 0 2.062-1.654 2.47-3.487 2.47h-6.156v-9.225zm3.036 3.655h2.464c.731 0 1.214-.26 1.214-.857s-.483-.857-1.214-.857h-2.464v1.714zm0 3.856h2.643c.804 0 1.357-.312 1.357-.964 0-.67-.553-.964-1.357-.964h-2.643v1.928z" />
                                                     </svg>
                                                 </div>
                                                 <div class="pcontact-feature-info">
@@ -2219,7 +2343,8 @@
                                                 title="Instagram">
                                                 <div class="pcontact-feature-icon" aria-hidden="true">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                                        <path d="M12 7.034A4.966 4.966 0 1 0 16.966 12 4.972 4.972 0 0 0 12 7.034zm0 7.932A2.966 2.966 0 1 1 14.966 12 2.97 2.97 0 0 1 12 14.966zM17.2 6.136a1.144 1.144 0 1 0 1.144 1.144A1.145 1.145 0 0 0 17.2 6.136zM16.32 2H7.68A5.686 5.686 0 0 0 2 7.68v8.64A5.686 5.686 0 0 0 7.68 22h8.64A5.686 5.686 0 0 0 22 16.32V7.68A5.686 5.686 0 0 0 16.32 2zm3.68 14.32a3.684 3.684 0 0 1-3.68 3.68H7.68A3.684 3.684 0 0 1 4 16.32V7.68A3.684 3.684 0 0 1 7.68 4h8.64a3.684 3.684 0 0 1 3.68 3.68z"/>
+                                                        <path
+                                                            d="M12 7.034A4.966 4.966 0 1 0 16.966 12 4.972 4.972 0 0 0 12 7.034zm0 7.932A2.966 2.966 0 1 1 14.966 12 2.97 2.97 0 0 1 12 14.966zM17.2 6.136a1.144 1.144 0 1 0 1.144 1.144A1.145 1.145 0 0 0 17.2 6.136zM16.32 2H7.68A5.686 5.686 0 0 0 2 7.68v8.64A5.686 5.686 0 0 0 7.68 22h8.64A5.686 5.686 0 0 0 22 16.32V7.68A5.686 5.686 0 0 0 16.32 2zm3.68 14.32a3.684 3.684 0 0 1-3.68 3.68H7.68A3.684 3.684 0 0 1 4 16.32V7.68A3.684 3.684 0 0 1 7.68 4h8.64a3.684 3.684 0 0 1 3.68 3.68z" />
                                                     </svg>
                                                 </div>
                                                 <div class="pcontact-feature-info">
@@ -2233,7 +2358,8 @@
                                                 title="Email: abinashfab098@gmail.com">
                                                 <div class="pcontact-feature-icon" aria-hidden="true">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                                        <path d="M19 4H5A3 3 0 0 0 2 7v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-14 2h14a1 1 0 0 1 1 1v.38l-8 5.33-8-5.33V7a1 1 0 0 1 1-1zm14 12H5a1 1 0 0 1-1-1V9.67l7.45 4.96a1 1 0 0 0 1.1 0L20 9.67V17a1 1 0 0 1-1 1z"/>
+                                                        <path
+                                                            d="M19 4H5A3 3 0 0 0 2 7v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-14 2h14a1 1 0 0 1 1 1v.38l-8 5.33-8-5.33V7a1 1 0 0 1 1-1zm14 12H5a1 1 0 0 1-1-1V9.67l7.45 4.96a1 1 0 0 0 1.1 0L20 9.67V17a1 1 0 0 1-1 1z" />
                                                     </svg>
                                                 </div>
                                                 <div class="pcontact-feature-info">
@@ -2249,7 +2375,7 @@
                                 <!-- RIGHT COLUMN: Contact Form Card -->
                                 <div class="pcontact-right-col">
                                     <div class="pcontact-form-card">
-                                        
+
 
                                         <form class="pcontact-form" id="contactForm" novalidate>
                                             <!-- Field 1: Your Name -->
@@ -2332,12 +2458,14 @@
                                 </h2>
                                 <p class="thank-you__role">UI/UX Designer</p>
                                 <div class="thank-you__meta">
-                                    <a href="mailto:abinashfab098@gmail.com" class="thank-you__meta-item" title="Send email">
+                                    <a href="mailto:abinashfab098@gmail.com" class="thank-you__meta-item"
+                                        title="Send email">
                                         <i class="fas fa-envelope thank-you__meta-icon" aria-hidden="true"></i>
                                         <span>abinashfab098@gmail.com</span>
                                     </a>
                                     <span class="thank-you__meta-divider" aria-hidden="true">|</span>
-                                    <a href="tel:+919626264452" class="thank-you__meta-item" title="Contact: +91 96262 64452">
+                                    <a href="tel:+919626264452" class="thank-you__meta-item"
+                                        title="Contact: +91 96262 64452">
                                         <i class="fas fa-phone thank-you__meta-icon" aria-hidden="true"></i>
                                         <span>Contact: +91 96262 64452</span>
                                     </a>
