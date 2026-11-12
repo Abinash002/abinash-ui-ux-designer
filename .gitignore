@@ -17,11 +17,17 @@ package-lock.json
 # Environment files & credentials
 .env
 .env.*
+*.pem
+*.key
 
-# OS & temporary files
+# OS & temporary editor files
 .DS_Store
 Thumbs.db
 desktop.ini
 *.log
 *.tmp
 *.bak
+*.swp
+*.swo
+*~
+~*
