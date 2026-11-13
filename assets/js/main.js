@@ -188,6 +188,15 @@ $('.services__active').slick({
 =============================================*/
 var $portfolioSlider = $('.portfolio__active');
 
+// Autoplay timing configuration
+// Requirements specify 5-second interval; constant allows easy tuning if needed
+var PORTFOLIO_AUTOPLAY_SPEED = 5000;
+var PORTFOLIO_SLIDE_SPEED = 1000;
+
+// Accessibility: Check user's prefers-reduced-motion preference
+var motionQuery = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+var isReducedMotion = motionQuery ? motionQuery.matches : false;
+
 // Function to update active/blur states on all slides
 function updatePortfolioBlur($slider) {
 	$slider.find('.slick-slide').each(function () {
@@ -208,13 +217,17 @@ $portfolioSlider.on('init', function (event, slick) {
 $portfolioSlider.slick({
 	dots: false,
 	infinite: true,
-	speed: 1000,
-	autoplay: false,
+	speed: PORTFOLIO_SLIDE_SPEED,
+	autoplay: true,
+	autoplaySpeed: PORTFOLIO_AUTOPLAY_SPEED,
+	pauseOnHover: false, // Managed by custom container-wide hover handler below
+	pauseOnFocus: true,
+	cssEase: 'cubic-bezier(0.25, 1, 0.5, 1)',
 	arrows: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
-	prevArrow: '<button class="slick-prev"><i class="far fa-long-arrow-alt-left"></i></button>',
-	nextArrow: '<button class="slick-next"><i class="far fa-long-arrow-alt-right"></i></button>',
+	prevArrow: '<button class="slick-prev" aria-label="Previous Project"><i class="far fa-long-arrow-alt-left"></i></button>',
+	nextArrow: '<button class="slick-next" aria-label="Next Project"><i class="far fa-long-arrow-alt-right"></i></button>',
 	responsive: [
 		{
 			breakpoint: 1200,
@@ -251,12 +264,17 @@ $portfolioSlider.slick({
 	]
 });
 
-// Run initial blur update for all slider instances
+// Immediately pause any sliders that are hidden (e.g. in inactive tab panes)
+// or if reduced-motion is requested, avoiding overlapping background timers
 $portfolioSlider.each(function () {
-	updatePortfolioBlur($(this));
+	var $slider = $(this);
+	updatePortfolioBlur($slider);
+	if (!$slider.is(':visible') || isReducedMotion) {
+		$slider.slick('slickPause');
+	}
 });
 
-// Update slide blur/active state on slide transitions using jQuery
+// Update slide blur/active state on slide transitions
 $portfolioSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 	var $slider = $(this);
 	$slider.find('.slick-slide').removeClass('slick-focus').addClass('slick-blur');
@@ -274,32 +292,134 @@ $portfolioSlider.on('beforeChange', function (event, slick, currentSlide, nextSl
 });
 
 $portfolioSlider.on('afterChange', function (event, slick, currentSlide) {
-	updatePortfolioBlur($(this));
+	var $slider = $(this);
+	updatePortfolioBlur($slider);
+
+	// If visitor is currently hovering or reduced-motion is enabled, remain paused
+	if ($slider.data('is-hovered') || isReducedMotion) {
+		$slider.slick('slickPause');
+	} else if ($slider.is(':visible')) {
+		// Reset & restart the 5-second timer cleanly after manual or auto slide change
+		$slider.slick('slickPlay');
+	}
 });
 
-// Optional: Clicking a side slide directly slides it into the center without opening link
+// Clicking a side slide directly navigates to it and resets timer
 $portfolioSlider.on('click', '.slick-slide:not(.slick-current)', function (e) {
 	e.preventDefault();
 	var index = $(this).data('slick-index');
 	if (index !== undefined) {
-		$(this).closest('.portfolio__active').slick('slickGoTo', index);
+		var $slider = $(this).closest('.portfolio__active');
+		$slider.slick('slickGoTo', index);
 	}
 });
 
+// Manual arrow navigation: clicking prev/next immediately transitions
+$portfolioSlider.on('click', '.slick-arrow', function () {
+	var $slider = $(this).closest('.portfolio__active');
+	if (!$slider.data('is-hovered') && !isReducedMotion && $slider.is(':visible')) {
+		// Reset the 5-second timer
+		$slider.slick('slickPlay');
+	}
+});
+
+// Hover Management: Pause on mouseenter over entire carousel (including previews & arrows)
+// Resume automatically on mouseleave with fresh 5-second countdown
+$portfolioSlider.on('mouseenter', function () {
+	$(this).data('is-hovered', true);
+	$(this).slick('slickPause');
+});
+
+$portfolioSlider.on('mouseleave', function () {
+	var $slider = $(this);
+	$slider.data('is-hovered', false);
+	if (!isReducedMotion && $slider.is(':visible')) {
+		$slider.slick('slickPlay');
+	}
+});
+
+// Touch Management for mobile/tablet: pause on touch, resume on release
+$portfolioSlider.on('touchstart', function () {
+	$(this).data('is-hovered', true);
+	$(this).slick('slickPause');
+});
+
+$portfolioSlider.on('touchend touchcancel', function () {
+	var $slider = $(this);
+	setTimeout(function () {
+		$slider.data('is-hovered', false);
+		if (!isReducedMotion && $slider.is(':visible')) {
+			$slider.slick('slickPlay');
+		}
+	}, 100);
+});
+
+// Viewport Intersection: Pause when scrolled out of view to save resources
+if ('IntersectionObserver' in window) {
+	var portfolioEl = document.getElementById('portfolioSection');
+	if (portfolioEl) {
+		var portfolioObserver = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (!entry.isIntersecting) {
+					$portfolioSlider.each(function () {
+						$(this).slick('slickPause');
+					});
+				} else {
+					var $vis = $('.portfolio__active:visible');
+					if ($vis.length && !isReducedMotion && !$vis.data('is-hovered')) {
+						$vis.slick('slickPlay');
+					}
+				}
+			});
+		}, { threshold: 0.15 });
+		portfolioObserver.observe(portfolioEl);
+	}
+}
+
+// Reduced Motion: Listen for OS accessibility setting changes
+if (motionQuery && motionQuery.addEventListener) {
+	motionQuery.addEventListener('change', function (e) {
+		isReducedMotion = e.matches;
+		if (isReducedMotion) {
+			$portfolioSlider.each(function () {
+				$(this).slick('slickPause');
+			});
+		} else {
+			var $vis = $('.portfolio__active:visible');
+			if ($vis.length && !$vis.data('is-hovered')) {
+				$vis.slick('slickPlay');
+			}
+		}
+	});
+}
+
+// Tab Switching: Cleanly coordinate autoplay between tabs (All, Website, Apps, Branding, etc.)
 $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
 	var target = $(this).attr('data-bs-target') || $(this).attr('href');
+
+	// Pause all sliders first so inactive tabs never run background timers
+	$portfolioSlider.each(function () {
+		$(this).slick('slickPause');
+	});
+
 	function refreshVisibleSlider() {
 		if (target) {
 			var $slider = $(target).find('.portfolio__active');
 			if ($slider.length && $slider.hasClass('slick-initialized')) {
 				$slider.slick('setPosition');
 				updatePortfolioBlur($slider);
+				if (!isReducedMotion && !$slider.data('is-hovered')) {
+					$slider.slick('slickPlay');
+				}
 			}
 		}
 		$('.portfolio__active:visible').each(function () {
 			if ($(this).hasClass('slick-initialized')) {
 				$(this).slick('setPosition');
 				updatePortfolioBlur($(this));
+				if (!isReducedMotion && !$(this).data('is-hovered')) {
+					$(this).slick('slickPlay');
+				}
 			}
 		});
 	}
