@@ -951,6 +951,19 @@ body.active-dark-mode .cert-detail__icon-badge--orange {
   color: #FF8F2D;
 }
 
+body.active-dark-mode .cert-verify-link {
+  background-color: rgba(0, 86, 251, 0.18);
+  color: #4D8DFF;
+  border-color: rgba(77, 141, 255, 0.25);
+}
+
+body.active-dark-mode .cert-verify-link:hover,
+body.active-dark-mode .cert-verify-link:focus {
+  background-color: #0056FB;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(0, 86, 251, 0.45);
+}
+
 body.active-dark-mode .cert-modal__close,
 body.active-dark-mode .btn-close.cert-modal__close {
   background-color: #172437 !important;
