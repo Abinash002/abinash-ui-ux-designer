@@ -872,6 +872,33 @@ body.active-dark-mode .cert-dual-item img {
   margin: 0;
 }
 
+/* Official Verification Link in Certificate Modal */
+.cert-verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--cert-font-sans, "Outfit", sans-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--cert-btn-blue, #0056FB);
+  background-color: var(--cert-btn-bg, #EEF4FF);
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(0, 86, 251, 0.15);
+}
+
+.cert-verify-link:hover,
+.cert-verify-link:focus {
+  background-color: var(--cert-btn-blue, #0056FB);
+  color: #ffffff !important;
+  border-color: var(--cert-btn-blue, #0056FB);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 86, 251, 0.25);
+  text-decoration: none;
+}
+
 /* -------------------------------------------------------------
    Dark Mode Support for Certificate Modal
 ------------------------------------------------------------- */
