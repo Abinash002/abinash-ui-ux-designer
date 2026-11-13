@@ -1028,6 +1028,12 @@ body.active-dark-mode .btn-close.cert-modal__close:hover {
     width: 36px !important;
     height: 36px !important;
   }
+  .cert-verify-link {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+    font-size: 13px;
+  }
 }
 
 /* -------------------------------------------------------------
