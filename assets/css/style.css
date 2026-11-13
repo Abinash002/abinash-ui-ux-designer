@@ -4541,14 +4541,235 @@ Breadcrumb
   }
 }
 
+/* ==============================================================
+   Portfolio Section — Mobile Responsive Refinements (<= 767.98px)
+   ============================================================== */
 @media (max-width: 767.98px) {
+  /* 1. Portfolio Container & Section Spacing */
+  .portfolio {
+    padding: 65px 0 55px;
+    overflow: hidden;
+  }
+
+  .portfolio .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* 2. Heading: Centered Two-Line Presentation & Balanced Spacing */
+  .portfolio .section__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .portfolio .section__title .sub-title {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+
+  .portfolio .section__title .title {
+    font-size: 28px;
+    line-height: 1.3;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  /* 3. Category Filters: Balanced Two-Column Grid */
+  .portfolio__nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px 14px !important;
+    max-width: 340px !important;
+    margin: 0 auto 20px !important;
+    padding: 0 4px !important;
+    border: none !important;
+  }
+
+  .portfolio__nav li {
+    margin: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .portfolio__nav li .nav-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    width: 100% !important;
+    padding: 6px 4px 10px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.03em !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    border: none !important;
+    background: transparent !important;
+    color: #4a4d52 !important;
+    transition: color 0.3s ease !important;
+  }
+
+  .active-dark-mode .portfolio__nav li .nav-link {
+    color: #a6abb4 !important;
+  }
+
+  .portfolio__nav li .nav-link.active,
+  .active-dark-mode .portfolio__nav li .nav-link.active {
+    color: #FCAF17 !important;
+  }
+
+  /* Yellow Triangular Active Indicator */
   .portfolio__nav li .nav-link::after {
-    bottom: 0;
-    left: -25px;
-    right: auto;
-    margin: 0;
-    border-width: 7px 0 7px 14px;
-    border-color: transparent transparent transparent #FCAF17;
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    bottom: -1px !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-style: solid !important;
+    border-width: 0 6px 7px 6px !important;
+    border-color: transparent transparent #FCAF17 transparent !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    transition: opacity 0.25s ease !important;
+  }
+
+  .portfolio__nav li .nav-link.active::after {
+    opacity: 1 !important;
+  }
+
+  /* 4. Project Carousel: 20px Spacing, Margins & Card Prominence */
+  .portfolio .tab-content {
+    margin-top: 0;
+  }
+
+  .portfolio__active {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .portfolio__active .slick-list {
+    overflow: visible !important;
+  }
+
+  .portfolio__active .slick-slide {
+    padding: 0 6px;
+    -webkit-transition: all 0.4s ease-out 0s !important;
+    transition: all 0.4s ease-out 0s !important;
+  }
+
+  .portfolio__active .slick-slide.slick-blur {
+    -webkit-transform: scale(0.82) !important;
+    transform: scale(0.82) !important;
+    filter: blur(4px) !important;
+    -webkit-filter: blur(4px) !important;
+    opacity: 0.55 !important;
+  }
+
+  .portfolio__active .slick-current.slick-active,
+  .portfolio__active .slick-slide.slick-focus {
+    -webkit-transform: scale(1) !important;
+    transform: scale(1) !important;
+    filter: blur(0px) !important;
+    -webkit-filter: blur(0px) !important;
+    opacity: 1 !important;
+    z-index: 5;
+  }
+
+  .portfolio__item {
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .portfolio__thumb {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .portfolio__thumb img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+
+  /* 5. Navigation: Comfortably Tappable Mobile Arrows */
+  .portfolio__active .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #191B1E;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    left: 8px;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: background 0.2s ease, transform 0.15s ease, color 0.2s ease;
+  }
+
+  .portfolio__active .slick-arrow.slick-next {
+    left: auto;
+    right: 8px;
+  }
+
+  .portfolio__active .slick-arrow:active {
+    transform: translateY(-50%) scale(0.92);
+  }
+
+  .active-dark-mode .portfolio__active .slick-arrow {
+    background: rgba(28, 32, 40, 0.9);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .active-dark-mode .portfolio__active .slick-arrow:hover,
+  .active-dark-mode .portfolio__active .slick-arrow:active {
+    color: #FCAF17;
+  }
+}
+
+@media (max-width: 420px) {
+  .portfolio__nav {
+    max-width: 310px !important;
+    gap: 10px 10px !important;
+  }
+  .portfolio__nav li .nav-link {
+    font-size: 12px !important;
+  }
+  .portfolio__active .slick-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+    left: 4px;
+  }
+  .portfolio__active .slick-arrow.slick-next {
+    left: auto;
+    right: 4px;
   }
 }
 
