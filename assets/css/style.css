@@ -4589,6 +4589,16 @@ Breadcrumb
   cursor: default;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .portfolio__active .slick-slide {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+}
+
 .portfolio__active .slick-current.slick-active .portfolio__overlay__content,
 .portfolio__active .slick-slide.slick-focus .portfolio__overlay__content {
   -webkit-transform: translate(-50%, -50%) scale(1);
